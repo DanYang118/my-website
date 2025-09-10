@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Dan Yang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="mystyle.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <img class="logo" src="images/mylogo.png" alt="Danyang logo" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="ux.html">UX design</a>
+        <a class="nav-link" href="visual.html">Visual design</a>
+        <a class="nav-link" href="contact.html" aria-current="page">Contact me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <h1 class="section-title">Hi, I'm Dan</h1>
+    <p>I’m a UX Designer based in Calgary, passionate about creating digital products that are intuitive, inclusive, and meaningful. I believe good design starts with people. By understanding user needs, behaviors, and pain points—and combining this with market insights—I aim to design experiences that are clear, accessible, and enjoyable to use. My learning journey at SAIT has strengthened my design thinking, research, and collaboration skills, while also shaping me into a thoughtful problem solver. Beyond the classroom, I bring empathy, patience, and creativity from my life experiences into every project I take on.</p>
+ 
+    <p class="lede">Feel free to reach out for opportunities, collaborations, or just a chat.</p>
+
+    <!-- Contact form -->
+    <!-- 前端校验；默认会走 script.js 中的 mailto 兜底，给 dannieyang118@gmail.com -->
+    <form id="contactForm" class="card form" novalidate>
+     
+        <div class="field">
+          <label for="name">Name</label>
+          <input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" inputmode="email" required />
+        </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell me anything you'd like to say" required></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn" id="submitBtn">Send Message</button>
+       
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Danyang. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    /* 可选：把 mailto 收件人改成你的邮箱（与 script.js 的默认保持一致） */
+    (function(){
+      const orig = window.location.origin || '';
+      // 如果你希望在 mailto 里固定你的邮箱地址，可在 script.js 里把地址改为你的：
+      // 在 script.js 的 mailtoFallback 中用：mailto:dannieyang118@gmail.com
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suit Store Checkout Flow Redesign — Case Study</title>
+
+  <link rel="stylesheet" href="mystyle.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <img class="logo" src="images/mylogo.png" alt="Danyang logo" />
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="menu-icon"></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="ux.html" aria-current="page">UX design</a>
+        <a class="nav-link" href="visual.html">Visual design</a>
+        <a class="nav-link" href="contact.html">Contact me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="detail-section">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> · <a href="ux.html">UX design</a> · <span>Suit Store Checkout</span>
+    </nav>
+
+    <h1 class="section-title">Suit Store Checkout Flow Redesign</h1>
+
+    <figure>
+      <!-- If your file name has spaces, prefer renaming to aritzia-1.png; or escape as aritzia%201.png -->
+      <img src="images/suit 0.png" alt="Suit Store Checkout image" />
+      <figcaption class="visually-hidden">Delivery options</figcaption>
+    </figure>
+
+    <section class="text-block">
+      <h3>Background</h3>
+      <p>Many e-commerce sites have long, unclear checkout flows that frustrate users and lower conversion rates.</p>
+
+      <h3>Goal</h3>
+      <p>Streamline the checkout process to make it faster, simpler, and more transparent.</p>
+
+      <h3>Solution</h3>
+      <p>Researched existing checkout patterns, identified best practices, and designed a clean step-by-step flow with progress indicators and clear order review.</p>
+     
+      <h3>Design Process</h3>        
+      <ul class="bullets">
+            <li>Competitive Analysis: Researched competitor apps (MTailor, Tom Tailor, Sumissura, Amazon) to identify best practices in checkout and customization flows.</li>
+            <li>Problem Investigation: Highlighted issues such as unclear progress indicators, lack of trust signals, and overly complex review steps.</li>
+            <li>Wireframes: Sketched low-fidelity screens to explore layout options and step-by-step flow.</li>
+          </ul>
+    
+    </section>
+
+    <figure>
+      <img src="images/suit 4.png" alt=" Mockups" />
+    </figure>
+    <figure>
+        <img src="images/suit 5.png" alt=" Wireframes" />
+      </figure>
+      <figure>
+        <img src="images/suit 2.png" alt=" Research results" />
+      </figure>
+
+
+    <section class="section">
+        <h2 class="section-title">You may also like</h2>
+        <div class="grid" id="youMayLikeGrid"></div>
+      </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Danyang. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
