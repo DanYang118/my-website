@@ -204,7 +204,12 @@
   
 
   /* ====== Responsive ====== */
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
+
+
+    .detail-section figure img {
+      max-width: 80%;   /* 在小屏时放大到 90% 宽 */
+    }
     .container {
       width: 85%;   /* 平板稍微宽一点 */
     }
@@ -215,7 +220,9 @@
 
 @media (max-width:760px){
 
-
+    .detail-section figure img {
+      max-width: 90%;   /* 在小屏时放大到 90% 宽 */
+    }
     .hero{display: flex;
         flex-direction: column;
         align-items: center;   }
