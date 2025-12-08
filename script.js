@@ -65,7 +65,6 @@ const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 (() => {
     // you may like 随机推荐所有项目（对应你 grid 里的数据）
     const projects = [
-      //{ href: "aritzia.html", img: "images/aritzia 1.png", title: "Aritzia App Research" },
       { href: "employer assessment guide.html", img: "images/employer assessment guide 0.png", title: "Brightspace Launch: Employer Assessment Guide" },
       { href: "shein.html", img: "images/shein 00.png", title: "Shein Product Detail Page Redesign" },
       { href: "dashboard.html", img: "images/dashboard 1.png", title: "Project Management Desktop App - Dashboard Design" },
