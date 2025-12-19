@@ -91,7 +91,7 @@
     width: 80%;
     max-width: 800px;
     margin: 20px auto;     /* 居中 */
-    text-align: left; /* 文本居中 */
+    text-align: left; /* 文本 */
   }
   
   .contact-container form {
@@ -215,6 +215,120 @@
     }
   }
 
+  .about-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 80%;
+    display: flex;
+  align-items: center; /* 垂直居中 */
+  }
+
+  .intro-text {
+    flex: 1;            /* 占据剩余空间 */
+  }
+  
+  .intro-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .intro-text p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .intro-image img {
+    width: 300px;       /* 个人头像宽度 */
+    height: 300px;      /* 个人头像高度 */
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 20px;
+  }
+  
+  /* 响应式：手机端文字在上，照片在下 */
+  @media (max-width: 768px) {
+    .about-intro {
+      flex-direction: column;
+      text-align: center;
+    }
+    .intro-image img {
+      width: 100%;
+    }
+    .about-header{
+      max-width: 90%;
+      display: flex;
+      flex-direction: column;
+        align-items: center;  
+    }
+  }
+  
+  .gallery-wrapper {
+    width: 80%;
+    margin: 50px auto;       /* 上下留白，左右自动居中 */
+  position: relative;      /* 为绝对定位的按钮提供参考 */
+    position: relative; /* 为箭头定位 */
+    padding:0 20px;
+    text-align: left;
+  }
+  
+  .photo-grid {
+    display: grid;
+    /* 核心：强制不换行，每张图占容器宽度的 33% (或固定像素) */
+    grid-auto-flow: column;
+    grid-auto-columns: calc(25% - 20px); 
+    gap: 10px;
+    margin: 0 20px;
+    
+    overflow-x: auto;
+    scroll-behavior: smooth; /* 丝滑滚动 */
+    scroll-snap-type: x mandatory; /* 自动吸附 */
+    
+    /* 隐藏滚动条 */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .photo-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .photo-item {
+    scroll-snap-align: start;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* 箭头样式 */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .prev { left: -10px; }
+  .next { right: -10px; }
+  
+  /* 移动端适配：每屏显示一张半，提示用户可滑动 */
+  @media (max-width: 768px) {
+    .photo-grid {
+      grid-auto-columns: 85%;
+    }
+  }
 
 /* ====== Mobile nav (<=760px) ====== */
 
@@ -259,3 +373,24 @@
   /* Motion */
   @media (prefers-reduced-motion: reduce){*{transition:none !important}html{scroll-behavior:auto}}
   
+  .card-image-wrapper {
+    position: relative; /* 必须设置，让奖章相对于图片定位 */
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .award-badge {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    background: #d3ccc4(0, 0, 0, 0.75);
+    color: white; /* 白色文字 */
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+  }
+ 

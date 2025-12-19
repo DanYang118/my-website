@@ -1,7 +1,17 @@
 // ====== Helpers ======
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
-
+//--- about me---
+function scrollGallery(direction) {
+  const grid = document.getElementById('photoGrid');
+  // 计算滚动距离：取第一张图片的宽度 + 间距
+  const scrollAmount = grid.clientWidth * 0.8; 
+  
+  grid.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
 // ====== Mobile menu ======
 (() => {
   const nav = $('#navLinks');
