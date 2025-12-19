@@ -56,9 +56,9 @@
   
   
   /* ====== Hero ====== */
-  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:34px 0}
+  .hero{display:grid;grid-template-columns:2fr 3fr;gap:48px;align-items:center;padding:34px 0}
   .hero-card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(80,61,34,.06)}
-  .hero-portrait{aspect-ratio:4/5;object-fit:cover;width:100%}
+  .hero-portrait{aspect-ratio:1/1;object-fit:cover;width: 100%}
   .hero-title{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(32px,6vw,64px);line-height:1.05;margin:0 0 16px}
   .hero-desc{font-size:18px;color:var(--ink-70);max-width:52ch}
   .hero-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
@@ -208,10 +208,17 @@
 
 
     .detail-section figure img {
-      max-width: 80%;   /* 在小屏时放大到 90% 宽 */
+      max-width: 90%;   /* 在小屏时放大到 90% 宽 */
+      
     }
     .container {
       width: 85%;   /* 平板稍微宽一点 */
+    }
+
+    .intro-image img {
+      max-width: 300px;
+      width: 100%;
+      margin: 0px;
     }
   }
 
@@ -241,8 +248,8 @@
   }
   
   .intro-image img {
-    width: 300px;       /* 个人头像宽度 */
-    height: 300px;      /* 个人头像高度 */
+    width: 400px;       /* 个人头像宽度 */
+    aspect-ratio:1/1;object-fit:cover;
     object-fit: cover;
     border-radius: 20px;
     margin: 0 20px;
