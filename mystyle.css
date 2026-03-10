@@ -20,7 +20,7 @@ a{text-decoration:none;color:inherit}
 .container {
   width: 90%;
   margin: auto;
-  padding-inline: 24px;   /* 涓よ竟鐣欑偣鍐呰竟璺� */
+  padding-inline: 24px;  
 }
 
   /* ====== Header & Nav ====== */
@@ -142,8 +142,61 @@ a{text-decoration:none;color:inherit}
   position: relative;
   z-index: 1;
 }
+/* --- 平板端 (768px - 1024px) --- */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr; /* 保持两列，但比例平分 */
+    gap: 32px;
+    padding: 60px 40px;
+  }
+  
+  .hero-title {
+    font-size: 36px; /* 稍微缩小标题，防止折行过多 */
+  }
+}
+/* --- 手机端 (<= 768px) --- */
+@media (max-width: 768px) {
+  .hero {
+    display: flex; /* 切换为弹性布局 */
+    flex-direction: column; /* 垂直堆叠 */
+    text-align: center; /* 文字居中 */
+    padding: 40px 20px;
+    margin-top: 80px; /* 避开固定导航栏 */
+    gap: 40px;
+  }
 
+  /* 1. 让图片区域排在最上方并撑满 */
+  .hero-visual {
+    order: -1; /* 强制图片排在文字前面 */
+    width: 100%;
+    max-width: 400px; /* 防止在超大屏手机上图片过大 */
+    margin: 0 auto;
+  }
 
+  .hero-card {
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(80, 61, 34, 0.1);
+  }
+
+  /* 2. 文字区域调整 */
+  .hero-text {
+    align-items: center; /* 确保文字内容水平居中 */
+  }
+
+  h1 {
+    margin-top: 0; /* 取消大屏时的顶部偏移 */
+  }
+
+  .hero-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    margin: 0 auto 24px;
+    text-align: center;
+  }
 
  /* About Section 布局 */
  .about-section {
@@ -252,7 +305,7 @@ a{text-decoration:none;color:inherit}
       .card-4 { border: 2px solid #CDD8C5; box-shadow: 0 10px 20px rgba(205, 216, 197, 0.2); }
       
       /* 移动端自适应：改为 1列 */
-      @media (max-width: 768px) {
+      @media (max-width: 760px) {
         .belief-grid {
           grid-template-columns: 1fr;
         }
@@ -341,7 +394,7 @@ a{text-decoration:none;color:inherit}
       .tool-item:hover span {
         color: #333;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 760px) {
         .tools-container {
           gap: 30px;
           justify-content: space-around; /* 手机端均匀分布 */
@@ -510,11 +563,11 @@ a{text-decoration:none;color:inherit}
 }
 
 /* --- Responsive Adjustments --- */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .process-image-card { width: calc((100% - 20px) / 2); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .timeline-row { grid-template-columns: 1fr; padding: 40px 20px; }
   .timeline-axis { display: none; }
   .timeline-text { position: static; margin-bottom: 30px; padding-right: 0; }
@@ -691,7 +744,7 @@ a{text-decoration:none;color:inherit}
 }
 
 /* 当屏幕宽度小于 768px 时 (针对手机) */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .works-grid {
     grid-template-columns: 1fr; /* 切换为单列 */
     gap: 30px;
@@ -854,7 +907,7 @@ a{text-decoration:none;color:inherit}
 }
 
 /* 响应式适配 */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .contact-container, .footer-nav, .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -870,7 +923,7 @@ a{text-decoration:none;color:inherit}
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 左图略宽 */
+  grid-template-columns: 1fr 1fr; 
   gap: 60px;
   align-items: center;
 }
@@ -1166,18 +1219,6 @@ a{text-decoration:none;color:inherit}
     border-radius: 8px;
   }
   
-  .award-badge {
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    background: #d3ccc4(0, 0, 0, 0.75);
-    color: white; /* 白色文字 */
-    padding: 5px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 20px;
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    border: 2px solid white;
+  
   }
  
