@@ -154,49 +154,7 @@ a{text-decoration:none;color:inherit}
     font-size: 36px; /* 稍微缩小标题，防止折行过多 */
   }
 }
-/* --- 手机端 (<= 768px) --- */
-@media (max-width: 768px) {
-  .hero {
-    display: flex; /* 切换为弹性布局 */
-    flex-direction: column; /* 垂直堆叠 */
-    text-align: center; /* 文字居中 */
-    padding: 40px 20px;
-    margin-top: 80px; /* 避开固定导航栏 */
-    gap: 40px;
-  }
 
-  /* 1. 让图片区域排在最上方并撑满 */
-  .hero-visual {
-    order: -1; /* 强制图片排在文字前面 */
-    width: 100%;
-    max-width: 400px; /* 防止在超大屏手机上图片过大 */
-    margin: 0 auto;
-  }
-
-  .hero-card {
-    width: 100%;
-    box-shadow: 0 15px 35px rgba(80, 61, 34, 0.1);
-  }
-
-  /* 2. 文字区域调整 */
-  .hero-text {
-    align-items: center; /* 确保文字内容水平居中 */
-  }
-
-  h1 {
-    margin-top: 0; /* 取消大屏时的顶部偏移 */
-  }
-
-  .hero-title {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  .hero-desc {
-    font-size: 16px;
-    margin: 0 auto 24px;
-    text-align: center;
-  }
 
  /* About Section 布局 */
  .about-section {
@@ -307,8 +265,11 @@ a{text-decoration:none;color:inherit}
       /* 移动端自适应：改为 1列 */
       @media (max-width: 760px) {
         .belief-grid {
+          width: 90%;
           grid-template-columns: 1fr;
+          margin: 0 auto;
         }
+        
         .belief-card:hover {
           transform: scale(1.1); /* 手机端放大倍数减小，防止出屏 */
         }
@@ -434,10 +395,6 @@ a{text-decoration:none;color:inherit}
 .process-section {
   padding: 60px 0;
   background-color: #fff;
-}
-
-.timeline-container {
-  margin-top: 30px;
 }
 
 /* --- Row & Layout --- */
@@ -568,6 +525,8 @@ a{text-decoration:none;color:inherit}
 }
 
 @media (max-width: 760px) {
+  .timeline-container{width: 90%;
+    margin: 0 auto;}
   .timeline-row { grid-template-columns: 1fr; padding: 40px 20px; }
   .timeline-axis { display: none; }
   .timeline-text { position: static; margin-bottom: 30px; padding-right: 0; }
@@ -732,10 +691,10 @@ a{text-decoration:none;color:inherit}
 /* 响应式调整 */
 /* 当屏幕宽度小于 1024px 时 (针对平板) */
 @media (max-width: 1024px) {
-  .works-grid {
-    grid-template-columns: repeat(2, 1fr); /* 切换为两列 */
+  .works-grid {width: 100%;
+    grid-template-columns: 1fr; /* 切换为单列 */
     gap: 25px; /* 间距稍微收紧 */
-    padding: 0 30px;
+    padding: 10 30px;
   }
   
   .works-section {
@@ -745,22 +704,40 @@ a{text-decoration:none;color:inherit}
 
 /* 当屏幕宽度小于 768px 时 (针对手机) */
 @media (max-width: 760px) {
-  .works-grid {
-    grid-template-columns: 1fr; /* 切换为单列 */
-    gap: 30px;
-    padding: 0 20px;
+  
+  /* 1. 关键：调整最外层容器，给手机端更多呼吸空间 */
+  .container {
+    width: 100%;       /* 手机端占满全宽 */
+    padding-inline: 12px; /* 减少 padding，从 24px 降到 12px */
   }
 
-  /* 调整卡片宽度：手机上不需要限定宽度，让它自然撑满 */
+  .works-section {
+    margin: 0 auto;
+    width: 90%;
+    padding: 60px 0; 
+  }
+
+  /* 2. 优化网格，减少边距 */
+  .works-grid {
+    grid-template-columns: 1fr; 
+    gap: 16px;         /* 缩小卡片间距 */
+    padding: 0;        /* 取消网格本身的 padding，依靠容器控制 */
+    width: 100%;
+  }
+
+  /* 3. 调整卡片：确保它真正撑满 */
   .work-card-v3 {
     width: 100% !important; 
-    max-width: 450px; /* 设置最大宽度防止超大屏幕手机下卡片过宽 */
-    margin: 0 auto; /* 居中显示 */
+    max-width: 100%;   /* 确保在小屏手机上不被 max-width 限制 */
+    margin: 0;         /* 取消 margin */
   }
 
+  /* 4. 优化卡片内部：增加可用面积 */
   .card-inner {
-    padding: 20px; /* 缩小内边距，节省屏幕空间 */
+    padding: 16px;     /* 保持适中的内边距，不要太挤也不要太松 */
+    border-radius: 12px; /* 手机上稍微减小圆角，视觉上更开阔 */
   }
+}
 
   /* 过滤器按钮在手机上可能太挤，允许换行 */
   .works-filter {
@@ -779,18 +756,23 @@ a{text-decoration:none;color:inherit}
   .work-title {
     font-size: 1.25rem; /* 手机上标题稍微调小 */
   }
-}
+
 
 /* --- Contact Section --- */
 .contact-section {
-  margin-top: 30px;
+width: 100%;
   text-align: center;
   padding: 60px 0;
   background-color: #FAF9F6; /* 浅米色背景，与 timeline 呼应 */
 }
-
+.contact-section h2 {
+  text-align: center;   /* 水平居中 */
+  margin-left: auto;    /* 配合宽度使用（双重保险） */
+  margin-right: auto;
+  margin-bottom: 40px;  /* 顺便给下方留点呼吸空间 */
+}
 .contact-container {
- 
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1179,7 +1161,8 @@ a{text-decoration:none;color:inherit}
     }
     .hero{display: flex;
         flex-direction: column;
-        align-items: center;   }
+        align-items: center;  
+        width: 90%; }
 
 
   /* 汉堡显示 */
@@ -1219,6 +1202,18 @@ a{text-decoration:none;color:inherit}
     border-radius: 8px;
   }
   
-  
+  .award-badge {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    background: #d3ccc4(0, 0, 0, 0.75);
+    color: white; /* 白色文字 */
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
   }
  
