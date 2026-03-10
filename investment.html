@@ -1,72 +1,114 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Investment App — Case Study</title>
+<!doctype html><html lang="en"><head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E94D1BX8N6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <link rel="stylesheet" href="mystyle.css" />
-</head>
-<body>
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Homepage">
-        <img class="logo" src="images/mylogo.png" alt="Danyang logo" />
-      </a>
-
-      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
-        <span class="menu-icon"></span>
-      </button>
-
-      <nav class="nav-links" id="navLinks">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="ux.html" aria-current="page">UX design</a>
-        <a class="nav-link" href="visual.html">Visual design</a>
-        <a class="nav-link" href="contact.html">Contact me</a>
-      </nav>
-    </div>
-  </header>
+  gtag('config', 'G-E94D1BX8N6');
+</script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dan Yang — UX Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mystyle.css">
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="index.html"><img class="logo" src="images/mylogo.png" alt="Danyang logo"></a>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
+        <p>Welcome to Dan's Portfolio </p>
+        <nav class="nav-links" id="navLinks">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="my works.html">My Works</a>
+          <a class="nav-link" href="contact.html">Contact me</a>
+        </nav>
+      </div>
+    </header>
 
   <!-- Main content -->
-  <main class="detail-section">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="index.html">Home</a> · <a href="ux.html">UX design</a> · <span>Investment App</span>
-    </nav>
+  <main class="container section">
+    <section class="project-hero">
+        <div class="container hero-grid">
+          <div class="hero-image">
+            <img src="images/investment 00.png" alt="investment app sign in page" />
+          </div>
+          <div class="hero-text">
+            <nav class="breadcrumb"><a href="my works.html">← Back to Works</a></nav>
+            <h1 class="project-title">Crypta Sign-In</h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <h4>Background</h4>
+                <p>A smooth user guided experience is the key to attracting users to create new account registrations for investment apps. The four key strategies to engage users to complete registration are through trust building, process streamlining, form optimization, and navigational guidance.</p>
+              </div>
+              <div class="meta-item">
+                <h4>The Goal</h4>
+                <p>Design a clear, secure, and user-friendly sign-in flow.</p>
+              </div>
+              <div class="meta-item">
+                <h4>Solution</h4>
+                <p>Created low-fidelity wireframes focusing on simplicity, accessibility, and trust-building cues (e.g., password visibility toggle, error states, two-factor authentication).</p>
 
-    <h1 class="section-title">Investment App - Sign-In Wireframe</h1>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <figure>
-      <!-- If your file name has spaces, prefer renaming to aritzia-1.png; or escape as aritzia%201.png -->
-      <img src="images/investment 0.png" alt="investment app sign in page" />
-      <figcaption class="visually-hidden">Investment app sign in pages</figcaption>
-    </figure>
-
-    <section class="text-block">
-      <h3>Background</h3>
-      <p>A smooth user guided experience is the key to attracting users to create new account registrations for investment apps. The four key strategies to engage users to complete registration are through trust building, process streamlining, form optimization, and navigational guidance.</p>
-
-      <h3>Goal</h3>
-      <p>Design a clear, secure, and user-friendly sign-in flow.</p>
-
-      <h3>Solution</h3>
-      <p>Created low-fidelity wireframes focusing on simplicity, accessibility, and trust-building cues (e.g., password visibility toggle, error states, two-factor authentication).</p>
-    </section>
-
-    <figure>
-      <img src="images/investment 2.png" alt=" Sign In Wireframe" />
-    </figure>
-    <section class="section">
-        <h2 class="section-title">You may also like</h2>
-        <div class="grid" id="youMayLikeGrid"></div>
+      <section class="project-skills-detailed">
+        <div class="container">
+          <h3 class="section-label">Core Competencies Applied</h3>
+          
+          <div class="skills-list-container">
+              <div class="skill-row">
+                <div class="skill-name">Secure UX Design</div>
+                <div class="skill-desc">Balancing high-level security (2FA/Biometrics) with user convenience to minimize drop-off rates during the authentication phase.</div>
+              </div>
+            
+              <div class="skill-row">
+                <div class="skill-name">Error & Validation Logic</div>
+                <div class="skill-desc">Designing clear, non-punitive error messages and real-time form validation to guide users through complex security requirements.</div>
+              </div>
+            
+              <div class="skill-row">
+                <div class="skill-name">Form Simplification</div>
+                <div class="skill-desc">Optimizing input fields and micro-interactions to reduce cognitive load and prevent "form fatigue" during sensitive data entry.</div>
+              </div>
+            
+              <div class="skill-row">
+                <div class="skill-name">Low-Fidelity Wireframing</div>
+                <div class="skill-desc">Mapping out complex user flows and decision trees before high-fidelity execution to ensure logical consistency.</div>
+              </div>
+          
+    
+          </div>
+        </div>
+      </section>
+      
+      <section class="project-gallery">
+        <div class="container">
+          <h3 class="section-label">Visual Journey</h3>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/investment01.png" alt="Process 1"></div>
+            <div class="gallery-item"><img src="images/investment 22.png" alt="Process 2"></div>
+    
+            </div>
+        </div>
       </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Danyang. All rights reserved.</div>
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Dan Yang. All rights reserved.</div>
+        <div class="footer-tagline">Designed with empathy. Built with care.</div>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
-</body>
-</html>
+  </body></html>
+  

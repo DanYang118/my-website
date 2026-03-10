@@ -1,68 +1,592 @@
 <!doctype html><html lang="en"><head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E94D1BX8N6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E94D1BX8N6');
+</script>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dan Yang — UX Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mystyle.css">
-    </head><body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html"><img class="logo" src="images/mylogo.png" alt="Danyang logo"></a>
-        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
-        <nav class="nav-links" id="navLinks">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="ux.html">UX design</a>
-          <a class="nav-link" href="visual.html">Visual design</a>
-          <a class="nav-link" href="contact.html">Contact me</a>
-        </nav>
-      </div>
-    </header>
-    
+    <body>
+      <header>
+        <div class="container nav">
+          <a class="brand" href="index.html"><img class="logo" src="images/mylogo.png" alt="Danyang logo"></a>
+          <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
+          <p>Welcome to Dan's Portfolio </p>
+          <nav class="nav-links" id="navLinks">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="my works.html">My Works</a>
+            <a class="nav-link" href="contact.html">Contact me</a>
+          </nav>
+        </div>
+      </header>
+      
     <main>
       <section class="container hero" aria-labelledby="hero-title">
-        <figure class="hero-card"><img class="hero-portrait" src="images/my profile.png" alt="dan‘s profile photo "></figure>
-        <div class="hero-text">
-          <h1 id="hero-title" class="hero-title">Hi, I'm Dan&nbsp;Yang</h1>
-          <p class="hero-desc"> UX Designer based in Calgary, designing digital experiences that are intuitive, inclusive, and emotionally resonant.</p>
-          <div class="hero-cta"><a class="btn" href="https://www.linkedin.com" target="_blank" rel="noopener">Find me on LinkedIn</a></div>
-        </div>
-      </section>
-      <section id="about-me" class="about-section">
+        <div class="hero-visual">
+          <figure class="hero-card">
+            <img class="hero-portrait" src="images/my profile.png" alt="Dan's profile photo">
+            <span class="status-badge">Available for Work</span>
+          </figure>
   
-        <div class="about-header">
-          <div class="intro-text">
-          <h2 class="section-title">About Me</h2>
-          <p>“Design with empathy, crafted with care.”</p>
-          <p>To me, UX design is like gardening—it requires observation, patience, and a deep understanding of its environment to help ideas grow. I design beyond the “happy path,” balancing elegance and usability with technical feasibility and scalability. 
-When I’m not working, you’ll find me walking, experimenting with new recipes, or tending to my plants.
+          <a href="mailto:dannieyang118@gmail.com" class="btn-hire">Hire   Me</a>
+        </div>
+      
+        <div class="hero-text">
+          <h1 id="hero-title" class="hero-title">Hello, I'm Dan&nbsp;Yang</h1>
+          <h2>Interaction Designer & Content Specialist</h2>
+          <p class="hero-desc">
+            Crafting accessible User Experiences through logical design and thoughtful storytelling.
           </p>
-        </div>
-        <div class="intro-image">
-          <img src="images/picsketch.jpg" alt="dan‘s photo sketch">
-        </div>  
-        </div>
-        <div class="gallery-wrapper">
-          <h3>My latest activities, shared with everyone!</h3>
-          <button class="nav-btn prev" onclick="scrollGallery(-1)">&#10094;</button>
-          <div class="photo-grid" id="photoGrid">
-            <div class="photo-item"><img src="images/about me 1.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 2.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 3.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 4.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 5.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 6.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 7.png" alt="event photo with my classmates"></div>
-            <div class="photo-item"><img src="images/about me 8.png" alt="event photo with my classmates"></div>
+      
+          <div class="hero-tags">
+            <span class="tag">Interaction Design</span>
+            <span class="tag">Visual Storytelling</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Information Architecture</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">Empathy-Driven Solutions</span>
           </div>
-          <button class="nav-btn next" onclick="scrollGallery(1)">&#10095;</button>
-        </div>
         </div>
       </section>
+      <section class="container about-section" id="about">
+        <div class="section-header">
+          <h2>What I Believe & What I Focus On</h2>
+        </div>
+        <div class="belief-grid">
+            <article class="belief-card card-1">
+              <div class="card-header">
+                <span class="card-icon">✦</span>
+                <p class="card-category">Inclusive Care</p>
+              </div>
+              <div class="card-content">
+                <h3 class="card-heading">Designing for Every Soul</h3>
+                <p class="card-desc">I believe that a truly great digital experience leaves no one behind. To me, accessibility isn't just a checklist—it’s a way of showing care and respect.</p>
+              </div>
+              <footer class="card-footer">Inclusivity • Accessibility • Advocacy</footer>
+            </article>
+        
+            <article class="belief-card card-2">
+              <div class="card-header">
+                <span class="card-icon">♥</span>
+                <p class="card-category">Human Connection</p>
+              </div>
+              <div class="card-content">
+                <h3 class="card-heading">People Over Pixels</h3>
+                <p class="card-desc">Technology should feel like a helping hand, not a hurdle. I strive to lead with empathy, listening deeply to the "why" behind user stories.</p>
+              </div>
+              <footer class="card-footer">Empathy-Driven • Human Connection • Active Listening</footer>
+            </article>
+        
+            <article class="belief-card card-3">
+              <div class="card-header">
+                <span class="card-icon">◎</span>
+                <p class="card-category">Thoughtful Clarity</p>
+              </div>
+              <div class="card-content">
+                <h3 class="card-heading">The Beauty of Clarity</h3>
+                <p class="card-desc">I find joy in bringing order to complexity. My focus is to make sure the message is always clear and easy to find for everyone.</p>
+              </div>
+              <footer class="card-footer">Bilingual Content • IA • Clarity</footer>
+            </article>
+        
+            <article class="belief-card card-4">
+              <div class="card-header">
+                <span class="card-icon">⚓</span>
+                <p class="card-category">Gentle Iteration</p>
+              </div>
+              <div class="card-content">
+                <h3 class="card-heading">Refining with Patience</h3>
+                <p class="card-desc">Every piece of feedback is a gift. I focus on the small, thoughtful details—testing and polishing until a solution is genuinely helpful.</p>
+              </div>
+              <footer class="card-footer">Usability Testing • Growth • Refinement</footer>
+            </article>
+          </div>
+          
+          <div class="tools-wrapper">
+            <h2>What I use to create</h2> 
+            <div class="tools-container">
+              <div class="tool-group">
+                <h4 class="group-name">Design & Research</h4>
+                <div class="tools-grid">
+                  <div class="tool-item" title="Figma & FigJam"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"><span>Figma/FigJam</span></div>
+                  <div class="tool-item" title="Adobe Illustrator"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"><span>Illustrator</span></div>
+                  <div class="tool-item" title="Adobe Photoshop"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"><span>Photoshop</span></div>
+                  <div class="tool-item" title="Maze"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/maze.svg" style="filter:invert(30%)"><span>Maze</span></div>
+                  <div class="tool-item" title="Canva">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                    <span>Canva</span>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="tool-group">
+                <h4 class="group-name">Dev & Web</h4>
+                <div class="tools-grid">
+                  <div class="tool-item" title="VS Code"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"><span>VS Code</span></div>
+                  <div class="tool-item" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+                  <div class="tool-item" title="Webflow"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg"><span>Webflow</span></div>
+                  <div class="tool-item" title="WordPress"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"><span>WP</span></div>
+                  <div class="tool-item" title="HTML/CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML/CSS</span></div>
+                </div>
+              </div>
+          
+              <div class="tool-group">
+                <h4 class="group-name">AI & Insights</h4>
+                <div class="tools-grid">
+                  <div class="tool-item" title="Gemini">
+                    <img src="https://cdn.simpleicons.org/googlegemini/8E75FF" alt="Gemini">
+                    <span>Gemini</span>
+                  </div>
+                  <div class="tool-item" title="ChatGPT">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
+                    <span>ChatGPT</span>
+                  </div>
+                   <div class="tool-item" title="Perplexity"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/perplexity.svg"><span>Perplexity</span></div>
+                  <div class="tool-item" title="Notion">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion">
+                    <span>Notion</span>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="tool-group">
+                <h4 class="group-name">Workflow</h4>
+                <div class="tools-grid">
+                  <div class="tool-item" title="Clockify"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/clockify.svg" style="filter:invert(40% archealth)"><span>Clockify</span></div>
+                  <div class="tool-item" title="Google Workspace"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"><span>Google</span></div>
+                  <div class="tool-item" title="Microsoft 365">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="M365">
+                    <span>MS 365</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="process-section" id="process">
+          <div class="container">
+            <div class="section-header">
+              <h2>How do I work as an designer?</h2>
+            </div>
+        
+            <div class="timeline-container">
+              
+              <div class="timeline-row phase-discover">
+                <div class="timeline-text">
+                  <span class="phase-number">Phase 01</span>
+                  <h3 class="process-heading">Deep Listening</h3>
+                  <p class="process-desc">I set aside assumptions to truly listen to the user's voice. Through interviews and deep research, I uncover the "why" behind the challenges they face.</p>
+                </div>
+                <div class="timeline-axis">
+                  <div class="dot"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="timeline-visuals">
+                  <div class="image-flex-container">
+                    <figure class="process-image-card">
+                      <img src="images/Competitor Research.png" alt="Competitor Research">
+                      <figcaption class="image-caption">Competitor Research</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/Affinity Map.png" alt="Affinity Map">
+                      <figcaption class="image-caption">Affinity Map</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/survey.png" alt="User survey">
+                      <figcaption class="image-caption">User survey</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="timeline-row phase-define">
+                <div class="timeline-text">
+                  <span class="phase-number">Phase 02</span>
+                  <h3 class="process-heading">Thoughtful Strategy</h3>
+                  <p class="process-desc">Finding order in chaos. I build information architectures and design user flows, prioritizing clarity and ease of use above all else.</p>
+                </div>
+                <div class="timeline-axis">
+                  <div class="dot"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="timeline-visuals">
+                  <div class="image-flex-container">
+                    <figure class="process-image-card">
+                      <div class="image-wrapper">
+                        <img src="images/brain storming.png" alt="brain storming">
+                      </div>
+                      <figcaption class="image-caption">Brain Storming</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <div class="image-wrapper">
+                        <img src="images/user flow.png" alt="User Flow">
+                      </div>
+                      <figcaption class="image-caption">User Flow</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <div class="image-wrapper">
+                        <img src="images/project planing.png" alt="project planing">
+                      </div>
+                      <figcaption class="image-caption">Project Planing</figcaption>
+                    </figure>
+                <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/user story.png" alt="user story">
+                  </div>
+                  <figcaption class="image-caption">User Story</figcaption>
+                </figure>
+
+                 <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/user journey.png" alt="user journey">
+                  </div>
+                  <figcaption class="image-caption">User Journey</figcaption>
+                </figure>
+
+
+                <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/pain point.png" alt="pain point">
+                  </div>
+                  <figcaption class="image-caption">Pain Point</figcaption>
+                </figure>
+
+                <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/IA.png" alt="Infomation Architecture">
+                  </div>
+                  <figcaption class="image-caption">Infomation Architecture</figcaption>
+                </figure>
+                
+                  </div>
+                </div>
+              </div>
+        
+              <div class="timeline-row phase-design">
+                <div class="timeline-text">
+                  <span class="phase-number">Phase 03</span>
+                  <h3 class="process-heading">Bringing Ideas to Life</h3>
+                  <p class="process-desc">From wireframes to high-fidelity prototypes, I focus on creating accessible, clean, and delightful interfaces that resonate with every user.</p>
+                </div>
+                <div class="timeline-axis">
+                  <div class="dot"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="timeline-visuals">
+                  <div class="image-flex-container">
+                    <figure class="process-image-card">
+                      <img src="images/sketch.png" alt="sketch">
+                      <figcaption class="image-caption">Sketch</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/UI style.png" alt="UI style">
+                      <figcaption class="image-caption">UI style</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/ware frame.png" alt="Wireframe">
+                      <figcaption class="image-caption">Wireframes</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/component.png" alt="Components">
+                      <figcaption class="image-caption">Component</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/mockup.png" alt="Mockup">
+                      <figcaption class="image-caption">Mockup</figcaption>
+                    </figure>
+                    <figure class="process-image-card">
+                      <img src="images/prototype.png" alt="Prototyping">
+                      <figcaption class="image-caption">Prototyping</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="timeline-row phase-test">
+                <div class="timeline-text">
+                  <span class="phase-number">Phase 04</span>
+                  <h3 class="process-heading">Learning from Every Voice</h3>
+                  <p class="process-desc">Every piece of real feedback is a gift. I identify friction points through tailored test plans and iterate with a gentle, meticulous touch.</p>
+                </div>
+                <div class="timeline-axis">
+                  <div class="dot"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="timeline-visuals">
+                  <div class="image-flex-container">
+                    <figure class="process-image-card">
+                      <img src="images/usability test.png" alt="Usability Testing">
+                      <figcaption class="image-caption">Usability Testing</figcaption>
+                    </figure>
+          
+
+                <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/release.png" alt="Release Plan">
+                  </div>
+                  <figcaption class="image-caption">Release Plan</figcaption>
+                </figure>
+
+                <figure class="process-image-card">
+                  <div class="image-wrapper">
+                    <img src="images/management.png" alt="Project Management">
+                  </div>
+                  <figcaption class="image-caption">Project Management</figcaption>
+                </figure>
+
+                <figure class="process-image-card">
+                  <img src="images/feedback.png" alt="Feedback">
+                  <figcaption class="image-caption">Feedback</figcaption>
+                </figure>
+
+                <figure class="process-image-card">
+                  <img src="images/recommendation.png" alt="Recommendation">
+                  <figcaption class="image-caption">Recommendation</figcaption>
+                </figure>
+
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </section>
+     
+        <section class="works-section" id="works">
+          <div class="container">
+            <div class="section-header">
+              <h2 >View My Works</h2>
+              
+              <div class="works-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="interaction">Interaction</button>
+                <button class="filter-btn" data-filter="service">Service</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+              </div>
+            </div>
+        
+            <div class="works-grid">
+              <article class="work-card-v3"data-category="interaction">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/student guide.png" alt="Brightspace Assessment Guide">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">🥇 Brightspace Employer Assessment Guide</h3>
+                    <p class="work-summary">Transforming static PDF evaluation guides into interactive LMS resources for better navigation.</p>
+                    <div class="skill-labels">
+                      <span>UX Research</span><span>IA</span><span>Prototyping</span><span>LMS Design</span>
+                      <span>Information Architecture</span><span>Wireframing</span>
+                    </div>
+                  </div>
+                  <a href="employer assessment guide.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+        
+              <article class="work-card-v3"data-category="service">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/senior 1.png" alt="Senior Chore Share">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">🥇 Senior Chore Share (SOS Panel)</h3>
+                    <p class="work-summary">A wall-mounted assistance panel with large buttons and voice input for independent seniors.</p>
+                    <div class="skill-labels">
+                      <span>Empathy Mapping</span><span>UI Design</span><span>User Research</span><span>Research Analysis</span><span>Insight Visualization</span>
+                      <span>Usability Testing</span><span>Feedback Iteration</span>
+                    </div>
+                  </div>
+                  <a href="senior.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+        
+              <article class="work-card-v3"data-category="interaction">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/dashboard 2.png" alt="Project Management Dashboard">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">Scrumzy – Project Management Dashboard</h3>
+                    <p class="work-summary"> A desktop project management tool designed to help teams organize tasks and track progress.</p>
+                    <div class="skill-labels"> 
+                      <span>Competitor Research</span><span>User Flow</span><span>UI Design</span><span>Wireframing</span>
+                      <span>Components</span><span>Prototyping</span><span>Usability Testing</span><span>Information Architecture</span>
+                    </div>
+                  </div>
+                  <a href="dashboard.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="interaction">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/shein 00.png" alt="Shein Product Detail Page">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">Shein Product Detail Page Redesign</h3>
+                    <p class="work-summary">This redesign goal was to simplify the layout and improve the shopping experience to help users find information quickly.</p>
+                    <div class="skill-labels">
+                      <span>Heuristic Evaluation</span><span>Tree Testing </span><span>User Journey</span><span>Wireframing</span>
+                      <span>Pain Point</span><span>Prototyping</span><span>Information Architecture</span>
+                    </div>
+                  </div>
+                  <a href="shein.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="interaction">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/investment001.png" alt="Investment App Sign-In">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">Crypta – Investment App Sign-In Flow</h3>
+                    <p class="work-summary">A sign-in flow design was focus on building trust, reducing friction, and making the login process secure and easy for new users.</p>
+                    <div class="skill-labels">
+                      <span>Error States</span><span>Two-Factor Authentication Flow</span><span>User Research</span><span>Wireframing</span>
+                    </div>
+                  </div>
+                  <a href="investment.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="service">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/rent.png" alt="RentFaster">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">RentFaster UX Evaluation & Redesign</h3>
+                    <p class="work-summary">The redesign addressed issues in filtering, listing clarity, and communication between renters and landlords.</p>
+                      <div class="skill-labels">
+                      <span>UX Evaluation </span><span>Problem Identification</span><span>Persona</span><span>User Journey</span>
+                    </div>
+                  </div>
+                  <a href="rentfaster.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="strategy">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/paw.png" alt="Pet Brand">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">PAWsitive – Pet Brand Strategy</h3>
+                    <p class="work-summary">A branding project for a premium orthopedic pet bed brand. The project focused on building a lifestyle brand that emphasizes comfort, care, and quality for pets.</p>
+                    <div class="skill-labels">
+                      <span>Brand Strategy</span><span>Visual Design</span><span>Packaging Design</span>
+                    </div>
+                  </div>
+                  <a href="pawsitive.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="strategy">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/yasairamen 0.jpg" alt="YASAI Ramen">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">YASAI Ramen Digital Advertising Campaign</h3>
+                    <p class="work-summary">A digital advertising concept designed for high-traffic transit stations. The campaign used bold food photography and minimal layouts to quickly capture attention from commuters.</p>
+                      <div class="skill-labels">
+                      <span>Marketing Concept</span><span>Poster</span><span>Digital Ad Design</span>
+                    </div>
+                  </div>
+                  <a href="yasai.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+
+              <article class="work-card-v3"data-category="strategy">
+                <div class="card-inner">
+                  <div class="work-thumb">
+                    <img src="images/bb4ck0.png" alt="BB4CK">
+                  </div>
+                  <div class="work-details">
+                    <h3 class="work-title">BB4CK Marketing Campaign</h3>
+                    <p class="work-summary"> A marketing strategy designed to raise awareness of childhood hunger and encourage community donations. The campaign targeted younger audiences through TikTok content and impactful poster.</p>
+                      <div class="skill-labels">
+                      <span>Brand Strategy</span><span>Campaign Design</span><span>Short-Form Video</span><span>Visual Storytelling</span>
+                    </div>
+                  </div>
+                  <a href="bb4ck.html" class="view-link-btn">View Project Details</a>
+
+                </div>
+              </article>
+              </div>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+          <h2 class="section-title">Let's Connect</h2>
+          <div class="contact-container">
+            <div class="contact-left">
+              <div class="footer-brand">
+                <strong>Dan Yang</strong>
+                <p>Interaction Designer & Content Specialist</p>
+              </div>
+              <div class="contact-methods">
+                <a href="mailto:dannieyang118@gmail.com" class="contact-item">
+                  <span class="icon">✉️</span>
+                  <span class="text">dannieyang118@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                  <span class="icon">📍</span>
+                  <span class="text">Calgary, AB</span>
+                </div>
+                <a href="https://www.linkedin.com/in/dan-yang-55544a2b9/" class="linkedin-btn" target="_blank">FIND ME ON LinkedIn</a>
+
+              </div>
+
+            </div>
+        
+            <div class="contact-right">
+              <div class="status-card">
+                <div class="status-indicator">
+                  <span class="pulse-dot"></span>
+                  <p>Available for work</p>
+                </div>
+                <h3 class="status-title">Currently accepting new projects starting March 2026.</h3>
+                <p class="status-desc">Freelance, contract, and full-time roles welcome.</p>
+        
+          
+              </div>
+            </div>
+          </div>
+        </section>
+
 
     </main>
-    
-    <footer class="site-footer"><div class="container">© <span id="year"></span> Danyang. All rights reserved.</div></footer>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 Dan Yang. All rights reserved.</div>
+          <div class="footer-tagline">Designed with empathy. Built with care.</div>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
     </body></html>
     

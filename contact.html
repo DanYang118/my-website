@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E94D1BX8N6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E94D1BX8N6');
+</script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Dan Yang</title>
@@ -11,56 +21,77 @@
 
   <link rel="stylesheet" href="mystyle.css" />
 </head>
-<body>
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Homepage">
-        <img class="logo" src="images/mylogo.png" alt="Danyang logo" />
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
+<body> 
+  
+  <header>
+  <div class="container nav">
+    <a class="brand" href="index.html"><img class="logo" src="images/mylogo.png" alt="Danyang logo"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="menu-icon"></span></button>
+    <p>Welcome to Dan's Portfolio </p>
+    <nav class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="my works.html">My Works</a>
+      <a class="nav-link" href="contact.html">Contact me</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav-links" id="navLinks">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="ux.html">UX design</a>
-        <a class="nav-link" href="visual.html">Visual design</a>
-        <a class="nav-link" href="contact.html" aria-current="page">Contact me</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="contact-container">
-    <h1 class="section-title">Hi, I'm Dan</h1>
+  <main>
+
+    <section class="contact-section" id="contact">
+    <h1>Hi, I'm Dan</h1>
     <p class="lede">Feel free to reach out for opportunities, collaborations, or just a chat.</p>
+      <div class="container contact-container">
+        <div class="contact-left">
+          <div class="footer-brand">
+            <strong>Dan Yang</strong>
+            <p>Interaction Designer & Content Specialist</p>
+          </div>
+          <div class="contact-methods">
+            <a href="mailto:dannieyang118@gmail.com" class="contact-item">
+              <span class="icon">✉️</span>
+              <span class="text">dannieyang118@gmail.com</span>
+            </a>
+            <div class="contact-item">
+              <span class="icon">📍</span>
+              <span class="text">Calgary, AB</span>
+            </div>
+            <a href="https://www.linkedin.com/in/dan-yang-55544a2b9/" class="linkedin-btn" target="_blank">FIND ME ON LinkedIn</a>
 
-    <!-- Contact form -->
-    <!-- 前端校验；默认会走 script.js 中的 mailto 兜底，给 dannieyang118@gmail.com -->
-    <form id="contactForm" class="card form" novalidate>
-     
-        <div class="field">
-          <label for="name">Name</label>
-          <input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" inputmode="email" required />
+    
+        <div class="contact-right">
+          <div class="status-card">
+            <div class="status-indicator">
+              <span class="pulse-dot"></span>
+              <p>Available for work</p>
+            </div>
+            <h3 class="status-title">Currently accepting new projects starting March 2026.</h3>
+            <p class="status-desc">Freelance, contract, and full-time roles welcome.</p>
+    
+      
+          </div>
         </div>
-
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me anything you'd like to say" required></textarea>
       </div>
+    </section>
 
-      <div class="actions">
-        <button type="submit" class="btn" id="submitBtn">Send Message</button>
-       
-      </div>
-    </form>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Danyang. All rights reserved.</div>
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Dan Yang. All rights reserved.</div>
+        <div class="footer-tagline">Designed with empathy. Built with care.</div>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
+  </body></html>
+  
 
   <script src="script.js"></script>
   <script>
